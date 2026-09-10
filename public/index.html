@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conecta Bairro - Não-Me-Toque/RS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="/images/logo-icon-location.png" />
+</head>
+
+<body>
+  <!-- Cabeçalho -->
+  <header class="main-header">
+    <div class="container header-content">
+      <a href="index.html" class="logo-area">
+        <span class="logo-icon">📍</span>
+        <div>
+          <span class="logo-title">CONECTA BAIRRO</span>
+          <span class="logo-city">Não-Me-Toque / RS</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="active">Início</a>
+        <a href="#categorias">Categorias</a>
+        <a href="#estabelecimentos">Estabelecimentos</a>
+        <a href="historia.html">História da Cidade</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="inicio">
+      <div class="container">
+        <div class="hero-text">
+          <span class="city-tag">NÃO-ME-TOQUE/RS</span>
+          <h1>GUIA DO BAIRRO</h1>
+          <p>Encontre o que você precisa<br>na nossa cidade.</p>
+
+          <div class="search-form">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="search-input" placeholder="Buscar"
+              aria-label="Buscar comércio">
+            <button type="button" id="search-btn">Buscar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIAS -->
+    <section class="categories-section" id="categorias">
+      <div class="container">
+        <div class="section-header-flex">
+          <h2 class="section-title">Categorias</h2>
+          <button class="filter-btn-all active" data-filter="all">Todas as Categorias</button>
+        </div>
+
+        <div class="categories-grid">
+          <button class="category-card" data-filter="alimentacao">
+            <span class="cat-icon">🍔</span>
+            <span class="cat-name">Alimentação</span>
+          </button>
+          <button class="category-card" data-filter="cuidados">
+            <span class="cat-icon">✂️</span>
+            <span class="cat-name">Cuidados Pessoais</span>
+          </button>
+          <button class="category-card" data-filter="saude">
+            <span class="cat-icon">💊</span>
+            <span class="cat-name">Saúde</span>
+          </button>
+          <button class="category-card" data-filter="servicos">
+            <span class="cat-icon">🔧</span>
+            <span class="cat-name">Serviços</span>
+          </button>
+          <button class="category-card" data-filter="comercio">
+            <span class="cat-icon">🛍️</span>
+            <span class="cat-name">Comércio</span>
+          </button>
+          <button class="category-card" data-filter="automotivo">
+            <span class="cat-icon">🚗</span>
+            <span class="cat-name">Automotivo</span>
+          </button>
+          <button class="category-card" data-filter="educacao">
+            <span class="cat-icon">🎓</span>
+            <span class="cat-name">Educação</span>
+          </button>
+          <button class="category-card" data-filter="esportes">
+            <span class="cat-icon">🏋️</span>
+            <span class="cat-name">Esportes & Lazer</span>
+          </button>
+          <button class="category-card" data-filter="agronegocio">
+            <span class="cat-icon">🌱</span>
+            <span class="cat-name">Agronegócio</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESTABELECIMENTOS E SIDEBAR -->
+    <section class="content-split" id="estabelecimentos">
+      <div class="container split-grid">
+
+        <!-- Coluna Esquerda: Cards -->
+        <div class="main-column">
+          <div class="section-header-flex">
+            <h2 class="section-title">Destaques da Cidade</h2>
+            <span id="counter" class="items-counter">Mostrando 0 estabelecimentos</span>
+          </div>
+
+          <div class="cards-grid" id="cards-container">
+          </div>
+
+          <div id="no-results" class="no-results" style="display: none;">
+            Nenhum comércio encontrado para esta busca ou categoria.
+          </div>
+        </div>
+
+        <!-- Coluna Direita: Sidebar -->
+        <aside class="sidebar-column">
+          <div class="info-box">
+            <h3>Sobre Não-Me-Toque</h3>
+            <p>Uma cidade acolhedora, trabalhadora e cheia de oportunidades para a nossa comunidade.</p>
+
+            <ul class="benefit-list">
+              <li>🛒 Compre no comércio local</li>
+              <li>📈 Fortaleça nossa economia</li>
+              <li>🤝 Gere empregos</li>
+              <li>⭐ Valorize nossa cidade</li>
+            </ul>
+
+            <a href="historia.html" class="btn-history">Saiba mais sobre a cidade</a>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="main-footer">
+    <div class="container footer-content">
+      <div class="footer-info">
+        <h3>Conecta Bairro • Não-Me-Toque/RS</h3>
+        <p>Projeto extensionista acadêmico, sem fins lucrativos.</p>
+      </div>
+      <div class="footer-legal">
+        <p>Uso comunitário 100% gratuito.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="js/script.js"></script>
+
+</html>
