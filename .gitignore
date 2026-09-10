@@ -1,2 +1,12 @@
+# Dependências do Node
 node_modules/
+
+# Banco de dados local
 database.sqlite
+database/database.sqlite
+
+# Configurações locais do VS Code e ambiente
+.vscode/
+.env
+.DS_Store
+*.log
