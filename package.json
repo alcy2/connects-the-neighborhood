@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "Guia de estabelecimentos de Não-Me-Toque/RS",
   "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js",
-    "seed": "node seed.js"
-  },
+"scripts": {
+  "start": "node seed.js && node server.js",
+  "dev": "node server.js",
+  "seed": "node seed.js"
+},
   "dependencies": {
     "cors": "^2.8.6",
     "express": "^4.22.2",
