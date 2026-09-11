@@ -517,7 +517,7 @@
         background-position: center;
         background-image:
           linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-          url('../images/background-mobille.jpeg');
+          url('/images/background-mobille.jpeg');
         text-align: center;
       }
 
