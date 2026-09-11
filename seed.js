@@ -17,11 +17,11 @@ const estabelecimentosFicticios = [
         imagem: '/images/mecanica-automotiva.jpg'
     },
     { 
-        nome: 'Restaurante Sabor Caseiro', 
+        nome: 'Conteiner Lanches', 
         categoria: 'Alimentação', 
-        endereco: 'Av. Alto Jacuí, 1200', 
+        endereco: 'Av. Dr. Waldomiro Graeff, 1047 - Centro', 
         status: 'Aberto',
-        imagem: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=500'
+        imagem: '/images/conteinerlanches.jpg'
     },
     { 
         nome: 'Pizzaria Não-Me-Toque', 
