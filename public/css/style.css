@@ -1,4 +1,4 @@
-    :root {
+:root {
       --primary: #185a38;
       --primary-hover: #114028;
       --primary-light: #e6f0eb;
@@ -317,7 +317,9 @@
     }
 
     .store-card-link {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
 
     .store-card {
@@ -328,6 +330,7 @@
       transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
       display: flex;
       flex-direction: column;
+      height: 100%;
     }
 
     .store-card-link:hover .store-card {
@@ -338,8 +341,8 @@
 
     .card-img-placeholder {
       width: 100%;
-      height: 140px;
-      background-color: #e2e8f0;
+      height: auto; 
+      background-color: #ffffff; 
       position: relative;
       overflow: hidden;
       display: flex;
@@ -349,9 +352,11 @@
 
     .card-img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      height: auto; 
+      max-height: 200px; 
+      object-fit: contain; 
       display: block;
+      margin: 0 auto;
     }
 
     .card-emoji {
@@ -512,7 +517,7 @@
       .nav-links {
         display: none;
       }
-
+    
       .hero-section {
         background-position: center;
         background-image:

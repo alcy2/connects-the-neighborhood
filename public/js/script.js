@@ -69,7 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
               <div class="card-header">
                 <h3>${item.nome}</h3>
               </div>
-              <p class="store-type">${item.categoria}</p>
               <p class="store-address">📍 ${item.endereco || 'Não-Me-Toque/RS'}</p>
               <span class="tag-pill">${item.categoria}</span>
             </div>

@@ -23,8 +23,8 @@ app.get('/api/estabelecimentos', (req, res) => {
 
     // Filtro por Categoria
     if (categoria && categoria.trim() !== '' && categoria !== 'Todas') {
-        sql += ' AND LOWER(categoria) = LOWER(?)';
-        params.push(categoria.trim());
+        sql += ' AND LOWER(categoria) LIKE LOWER(?)';
+        params.push(`%${categoria.trim()}%`);
     }
 
     // Filtro por Nome ou Serviço na Busca

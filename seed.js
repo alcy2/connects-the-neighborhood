@@ -3,195 +3,314 @@ const db = require('./database/database.js');
 const estabelecimentosFicticios = [
     // 🍔alimentacao
     { 
-        nome: 'Hamburgueria do Zé', 
-        categoria: 'Alimentação', 
-        endereco: 'Rua Padre Valentim, 245', 
+        nome: 'Artesano Smash Burger', 
+        categoria: 'Alimentação - Hamburgueria', 
+        endereco: 'R. Alberto Pasqualini, 375 - Martini', 
         status: 'Aberto',
-        imagem: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500'
+        imagem: '/images/artesanoburger.jpg'
     },
     { 
-        nome: 'Teste', 
-        categoria: 'Alimentação', 
-        endereco: 'Rua Liberato Salzano, 230 - centro', 
+        nome: 'Restaurante Tia Léia', 
+        categoria: 'Alimentação - Restaurante', 
+        endereco: 'Av. Guilherme Augustin, 72 - Centro', 
         status: 'Aberto',
-        imagem: '/images/mecanica-automotiva.jpg'
+        imagem: '/images/tialeia.png'
     },
     { 
         nome: 'Conteiner Lanches', 
-        categoria: 'Alimentação', 
+        categoria: 'Alimentação - Lancheria', 
         endereco: 'Av. Dr. Waldomiro Graeff, 1047 - Centro', 
         status: 'Aberto',
         imagem: '/images/conteinerlanches.jpg'
     },
     { 
-        nome: 'Pizzaria Não-Me-Toque', 
-        categoria: 'Alimentação', 
+        nome: 'Serranos Pizzaria', 
+        categoria: 'Alimentação - Pizzaria', 
         endereco: 'R. Alferes Rodrigo, 478 - Santo Antônio', 
         status: 'Aberto',
         imagem: '/images/serranos-pizzaria.jpg'
     },
     { 
-        nome: 'Padaria e Confeitaria Central', 
-        categoria: 'Alimentação', 
-        endereco: 'Av. Dr. Waldomiro Graeff, 310', 
+        nome: 'X Lanches Dtalia', 
+        categoria: 'Alimentação - Lancheria', 
+        endereco: 'R. Dr. Otto Stahl, 1045 - Centro', 
         status: 'Aberto',
-        imagem: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=500'
+        imagem: '/images/xlanches.jpg'
     },
 
     // ✂️cuidados pessoais
     { 
-        nome: 'Gisélia Elegance', 
-        categoria: 'Cuidados Pessoais', 
-        endereco: 'Rua Pedro Augustin, 432', 
+        nome: 'Barbearia Bruno Lima', 
+        categoria: 'Cuidados Pessoais - Barbearia', 
+        endereco: 'R. Cel. Alberto Schmitt, 140 - Centro', 
         status: 'Aberto',
-        imagem: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=500'
+        imagem: '/images/barbeariabruno.jpg'
     },
     { 
-        nome: 'Barbearia Central', 
-        categoria: 'Cuidados Pessoais', 
-        endereco: 'Av. Alto Jacuí, 812', 
+        nome: 'Na Centro Estético', 
+        categoria: 'Cuidados Pessoais - Salão de Beleza', 
+        endereco: 'R. São Francisco Solano, 619 - Vila Nova', 
         status: 'Aberto',
-        imagem: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=500'
+        imagem: '/images/nacentroestetico.jpg'
     },
     { 
-        nome: 'Studio Beleza & Estética', 
-        categoria: 'Cuidados Pessoais', 
-        endereco: 'Rua Otto Stahl, 105', 
+        nome: 'Espaço L&A', 
+        categoria: 'Cuidados Pessoais - Salão de Beleza', 
+        endereco: 'R. Piratini, 237 - Boa Vista', 
         status: 'Aberto',
-        imagem: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500'
+        imagem: '/images/laespaco1.jpg'
     },
 
     // 💊saude
     { 
-        nome: 'Farma Bem', 
-        categoria: 'Saúde', 
-        endereco: 'Rua Getúlio Vargas, 680', 
+        nome: 'Efficare Clínica - Consultório Odontológico', 
+        categoria: 'Saúde - Dentista', 
+        endereco: 'R. Frei Olímpio Reichert, 512 - Centro', 
         status: 'Aberto',
-        imagem: 'https://images.unsplash.com/photo-1586015555751-63bb77f4322a?w=500'
+        imagem: '/images/efficare1.png'
     },
     { 
         nome: 'Farmácia São João', 
-        categoria: 'Saúde', 
-        endereco: 'Av. Alto Jacuí, 450', 
+        categoria: 'Saúde - Farmácia', 
+        endereco: 'Av. Alto Jacuí, 647 - Centro', 
         status: 'Aberto',
-        imagem: 'https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=500'
+        imagem: '/images/saojoao1.jpg'
     },
     { 
-        nome: 'Clínica Odontológica Sorrir', 
-        categoria: 'Saúde', 
-        endereco: 'Rua Pedro Augustin, 112', 
+        nome: 'Panvel Farmácias', 
+        categoria: 'Saúde - Farmácia', 
+        endereco: 'Av. Alto Jacuí, 504 - Centro',
         status: 'Aberto',
-        imagem: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=500'
+        imagem: '/images/panvel.jpg'
+    },
+    { 
+        nome: 'LAZO - Centro Especializado em Saúde', 
+        categoria: 'Saúde - Saúde Mental', 
+        endereco: 'Av. Alto Jacuí, 245 - Centro',
+        status: 'Aberto',
+        imagem: '/images/lazo.png'
     },
 
     // 🔧servicos
     { 
-        nome: 'Auto Tech Serviços', 
-        categoria: 'Serviços', 
-        endereco: 'Rua Otto Stahl, 410', 
+        nome: 'Cristech - Ar Condicionado e Energia Solar', 
+        categoria: 'Serviços - Instalação/Manutenção', 
+        endereco: 'R. Cristiano J Souza, 230 - Ipiranga', 
         status: 'Aberto',
-        imagem: '/images/mecanica-automotiva.jpg'
+        imagem: '/images/cristech.png'
     },
     { 
-        nome: 'Eletro Consertos NMT', 
-        categoria: 'Serviços', 
-        endereco: 'Rua Augusto De Carli, 301', 
+        nome: 'Connect Informática', 
+        categoria: 'Serviços - Informática', 
+        endereco: 'Av. Alto Jacuí, 456 - Centro', 
         status: 'Aberto',
-        imagem: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=500'
+        imagem: '/images/connect.jpg'
     },
     { 
-        nome: 'Escritório Contábil Progresso', 
-        categoria: 'Serviços', 
-        endereco: 'Rua Padre Valentim, 510', 
+        nome: 'Edson Chaveiro', 
+        categoria: 'Serviços - Chaveiro', 
+        endereco: 'R. Dr. Otto Stahl, 729 - Centro', 
         status: 'Aberto',
-        imagem: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500'
+        imagem: '/images/edsonchaveiro.jpg'
+    },
+    { 
+        nome: 'ConstruForte', 
+        categoria: 'Serviços - Materiais de Construção', 
+        endereco: 'R. Fernando Sturm, 100 - Centro', 
+        status: 'Aberto',
+        imagem: '/images/construforte.jpg'
+    },
+    { 
+        nome: 'Parfix', 
+        categoria: 'Serviços - Ferragem', 
+        endereco: 'Av. Alto Jacuí, 36 - Centro', 
+        status: 'Aberto',
+        imagem: '/images/parfix.jpg'
     },
 
     // 🛍️comercio
     { 
-        nome: 'Supermercado do Bairro', 
-        categoria: 'Comércio', 
-        endereco: 'Av. Alto Jacuí, 1550', 
+        nome: 'Mercamax', 
+        categoria: 'Comércio - Mercado', 
+        endereco: 'Av. Alto Jacuí, 615 - Centro', 
         status: 'Aberto',
-        imagem: 'https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=500'
+        imagem: '/images/mercamax.jpg'
     },
     { 
-        nome: 'Loja Estilo & Moda', 
-        categoria: 'Comércio', 
-        endereco: 'Rua Pedro Augustin, 201', 
+        nome: 'Ella Exclusive', 
+        categoria: 'Comércio - Loja de Roupa',
+        endereco: 'R. Liberato Salzano, 204 - Centro', 
         status: 'Aberto',
-        imagem: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=500'
+        imagem: '/images/ella.jpg'
     },
     { 
-        nome: 'Bazar e Papelaria Horizonte', 
-        categoria: 'Comércio', 
-        endereco: 'Av. Dr. Waldomiro Graeff, 620', 
+        nome: 'Papelaria Alto Jacuí', 
+        categoria: 'Comércio - Papelaria', 
+        endereco: 'Av. Alto Jacuí, 859 - Centro', 
         status: 'Aberto',
-        imagem: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=500'
+        imagem: '/images/papelaria.jpg'
+    },
+    { 
+        nome: 'Agroval Pet Shop', 
+        categoria: 'Comércio - Pet Shop', 
+        endereco: 'Av. Dr. Waldomiro Graeff, 708 - Centro', 
+        status: 'Aberto',
+        imagem: '/images/agroval.jpg'
+    },
+    { 
+        nome: 'DONNA Amélia Flores', 
+        categoria: 'Comércio - Floricultura', 
+        endereco: 'R. Fernando Sturm, 100 - Centro', 
+        status: 'Aberto',
+        imagem: '/images/donaamelia.jpg'
+    },
+    { 
+        nome: 'Studio Prime', 
+        categoria: 'Comércio - Móveis e Planejados', 
+        endereco: 'Rua Coronel Alberto Schimitt 259, Centro', 
+        status: 'Aberto',
+        imagem: '/images/studioprime.png'
     },
 
     // 🚗automotivo
     { 
-        nome: 'Mecânica e Auto Center Jacuí', 
-        categoria: 'Automotivo', 
-        endereco: 'RS-142, Km 2', 
+        nome: 'DF Auto Elétrica', 
+        categoria: 'Automotivo - Manutenção', 
+        endereco: 'R. Ulisses Guimarães, 288 - Jardim', 
         status: 'Aberto',
-        imagem: 'https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=500'
+        imagem: '/images/dfauto.png'
     },
     { 
-        nome: 'Posto de Combustíveis Rota 142', 
-        categoria: 'Automotivo', 
-        endereco: 'Av. Alto Jacuí, 2200', 
+        nome: 'Mecânica do Adão', 
+        categoria: 'Automotivo - Manutenção', 
+        endereco: 'R. Doná Góia, 181 - Ioris', 
         status: 'Aberto',
-        imagem: '/images/posto-combustivel.jpg'
+        imagem: '/images/mecadao.png'
+    },
+    { 
+        nome: 'Sorento Autopeças', 
+        categoria: 'Automotivo - Loja de Produtos', 
+        endereco: 'Av. Alto Jacuí, 564 - Ipiranga', 
+        status: 'Aberto',
+        imagem: '/images/sorento.png'
+    },
+    { 
+        nome: 'Formiga Chapeação', 
+        categoria: 'Automotivo - Manutenção', 
+        endereco: 'Av. Dr. Waldomiro Graeff, 2218 - Santo Antônio', 
+        status: 'Aberto',
+        imagem: '/images/formiga.png'
     },
 
     // 🎓Educacao
     { 
-        nome: 'Escola de Idiomas Skill Up', 
-        categoria: 'Educação', 
-        endereco: 'Rua Alberto Pasqualini, 150', 
+        nome: 'Wizard', 
+        categoria: 'Educação - Escola de Idiomas', 
+        endereco: 'Av. Dr. Waldomiro Graeff, 1435 - Centro', 
         status: 'Aberto',
-        imagem: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=500'
+        imagem: '/images/wizard.jpg'
     },
     { 
-        nome: 'Centro de Reforço Escolar Aprender', 
-        categoria: 'Educação', 
-        endereco: 'Rua Getúlio Vargas, 230', 
+        nome: 'Fisk', 
+        categoria: 'Educação - Escola de Idiomas', 
+        endereco: 'R. Augusto Scherer, 783 - Centro', 
         status: 'Aberto',
-        imagem: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=500'
+        imagem: '/images/fisk.jpg'
+    },
+    { 
+        nome: 'Opportunity', 
+        categoria: 'Educação - Escola de Profissões', 
+        endereco: 'Av. Dr. Waldomiro Graeff, 1981 - Centro', 
+        status: 'Aberto',
+        imagem: 'images/oportunitty.png'
+    },
+    { 
+        nome: 'Sete de Setembro', 
+        categoria: 'Educação - Escola de Ensino Fundamental', 
+        endereco: 'R. Cel. Alberto Schmitt, 700 - Centro', 
+        status: 'Aberto',
+        imagem: 'images/escolasete.png'
+    },
+    { 
+        nome: 'Anhanguera e Unopar', 
+        categoria: 'Educação - Faculdade e Universidade', 
+        endereco: 'Av. Alto Jacuí, 572 - Centro', 
+        status: 'Aberto',
+        imagem: 'images/faculdade.png'
+    },
+    { 
+        nome: 'Girassol', 
+        categoria: 'Educação - Escola de Educação Básica', 
+        endereco: 'v. Dr. Waldomiro Graeff, 1159 - Centro', 
+        status: 'Aberto',
+        imagem: 'images/girassol.png'
     },
 
     // 🏋️Esportes & Lazer
     { 
-        nome: 'Academia Fit & Saúde', 
-        categoria: 'Esportes & Lazer', 
-        endereco: 'Av. Dr. Waldomiro Graeff, 1020', 
+        nome: 'i9 Padel', 
+        categoria: 'Esportes & Lazer - Quadra de Padel', 
+        endereco: 'R. Berlim, 243 - Bairro Pôr do Sol', 
         status: 'Aberto',
-        imagem: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500'
+        imagem: '/images/i9padel.png'
     },
     { 
-        nome: 'Arena de Society NMT', 
-        categoria: 'Esportes & Lazer', 
-        endereco: 'Rua Otto Stahl, 1500', 
+        nome: 'Arena Society NMT', 
+        categoria: 'Esportes & Lazer - Campo de Futebol 7', 
+        endereco: 'R. Eurídes de Freitas, 832 - Arlindo Hermes', 
         status: 'Aberto',
-        imagem: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=500'
+        imagem: '/images/society.png'
+    },
+    { 
+        nome: 'Winner Esports', 
+        categoria: 'Esportes & Lazer - Padel e Beach Tênnis', 
+        endereco: 'Av. Alto Jacuí, 1261 - Centro', 
+        status: 'Aberto',
+        imagem: '/images/winner.png'
+    },
+    { 
+        nome: 'Empório 360', 
+        categoria: 'Esportes & Lazer - Bar', 
+        endereco: 'R. Dr. Otto Stahl, 1043 - Centro', 
+        status: 'Aberto',
+        imagem: '/images/emporio.png'
+    },
+    { 
+        nome: 'LF Academia e Personal', 
+        categoria: 'Esportes & Lazer - Academia', 
+        endereco: 'R. Liberato Salzano, 146 - Centro', 
+        status: 'Aberto',
+        imagem: '/images/lfacademia.png'
+    },
+    { 
+        nome: '512 Pub', 
+        categoria: 'Esportes & Lazer - Bar', 
+        endereco: 'Av. Guilherme Augustin, 482 - Stara', 
+        status: 'Aberto',
+        imagem: '/images/512pub.png'
     },
 
     // 🌱Agronegocio
     { 
-        nome: 'Agro Campo Insumos', 
-        categoria: 'Agronegócio', 
-        endereco: 'Av. Guilherme Augustin, 1200', 
+        nome: 'Stara', 
+        categoria: 'Agronegócio - Máquinas e Implementos', 
+        endereco: 'Stara, Não-Me-Toque - RS', 
         status: 'Aberto',
-        imagem: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=500'
+        imagem: '/images/stara.png'
     },
     { 
-        nome: 'Sementes & Assistência Técnica RS', 
-        categoria: 'Agronegócio', 
-        endereco: 'Rodovia RS-142, Km 5', 
+        nome: 'Jan', 
+        categoria: 'Agronegócio - Máquinas e Implementos', 
+        endereco: 'Av. Dr. Waldomiro Graeff, 557 - Centro', 
         status: 'Aberto',
-        imagem: 'https://images.unsplash.com/photo-1595974482597-4b8da8879bc5?w=500'
+        imagem: '/images/jan.png'
+    },
+    { 
+        nome: 'Sementes Roos', 
+        categoria: 'Agronegócio - Sementes, Grãos e Insumos', 
+        endereco: 'Av. Dr. Waldomiro Graeff, 3132', 
+        status: 'Aberto',
+        imagem: '/images/roos.png'
     }
 ];
 
