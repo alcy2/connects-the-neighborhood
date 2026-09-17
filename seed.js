@@ -7,7 +7,7 @@ const estabelecimentosFicticios = [
         categoria: 'Alimentação - Hamburgueria', 
         endereco: 'R. Alberto Pasqualini, 375 - Martini', 
         status: 'Aberto',
-        imagem: '/images/artesanoburger.jpg'
+        imagem: '/images/artesano1.png'
     },
     { 
         nome: 'Restaurante Tia Léia', 
@@ -35,7 +35,7 @@ const estabelecimentosFicticios = [
         categoria: 'Alimentação - Lancheria', 
         endereco: 'R. Dr. Otto Stahl, 1045 - Centro', 
         status: 'Aberto',
-        imagem: '/images/xlanches.jpg'
+        imagem: '/images/xlanches1.png'
     },
 
     // ✂️cuidados pessoais
@@ -311,6 +311,13 @@ const estabelecimentosFicticios = [
         endereco: 'Av. Dr. Waldomiro Graeff, 3132', 
         status: 'Aberto',
         imagem: '/images/roos.png'
+    },
+    { 
+        nome: 'Cotrijal Cooperativa', 
+        categoria: 'Agronegócio - Cooperativa Agropecuária', 
+        endereco: 'R. Júlio Graeff, 01 - Centro', 
+        status: 'Aberto',
+        imagem: '/images/cotrijal.png'
     }
 ];
 
