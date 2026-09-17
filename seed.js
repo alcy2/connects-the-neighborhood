@@ -74,14 +74,14 @@ const estabelecimentosFicticios = [
         categoria: 'Saúde - Farmácia', 
         endereco: 'Av. Alto Jacuí, 647 - Centro', 
         status: 'Aberto',
-        imagem: '/images/saojoao1.jpg'
+        imagem: '/images/saojoao.png'
     },
     { 
         nome: 'Panvel Farmácias', 
         categoria: 'Saúde - Farmácia', 
         endereco: 'Av. Alto Jacuí, 504 - Centro',
         status: 'Aberto',
-        imagem: '/images/panvel.jpg'
+        imagem: '/images/panvel.png'
     },
     { 
         nome: 'LAZO - Centro Especializado em Saúde', 
